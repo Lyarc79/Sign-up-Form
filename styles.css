@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero {
+    background-color: lightgray;
+    width: 55vw;
+}
+
+.right-panel {
+    width: 45vw;
+    padding: 30px;
+}
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.form-panel {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    background-color: #F6F7F8;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    padding: 50px;
+    margin-bottom: 30px;
+}
+
+.form-container {
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+}

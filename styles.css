@@ -1,8 +1,16 @@
+@font-face {
+    font-family: "Norse Bold";
+    src: url("./fonts/Norse-Bold.otf");
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .main {
@@ -13,28 +21,62 @@
 }
 
 .hero {
-    background-color: lightgray;
+    position: relative;
+    background-image: url(./imgs/hero_back01.jpg);
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-color: rgb(46, 46, 46);
     width: 55vw;
 }
 
+.odin-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.363);
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.odin-container p{
+    font-family: "Norse Bold";
+    color: white;
+    font-size: 90px;
+}
+
 .right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 45vw;
-    padding: 30px;
+    background-color: #f0f0f0;
 }
 
 .form-header {
-    margin-bottom: 30px;
+    padding-left: 50px;
+    margin-bottom: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    width: 80%;
 }
 
 .form-panel {
     display: flex;
     flex-flow: row wrap;
     gap: 20px;
-    background-color: #F6F7F8;
-    border: 1px solid #D6D9DC;
-    border-radius: 3px;
-    padding: 50px;
+    background-color: white;
+    box-shadow: 0px 3px 8px rgb(187, 187, 187);
+    padding: 30px 50px;
     margin-bottom: 30px;
+}
+
+.form-panel h2{
+    flex-basis: 100%;
+    font-weight: 500;
 }
 
 .form-container {
@@ -42,3 +84,43 @@
     flex-flow: column wrap;
     width: 40%;
 }
+
+.form-container label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #464646;
+    margin-bottom: 2px;
+}
+
+.form-container input{
+    border: 1px solid #E5E7EB;
+    height: 25px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+.form-button{
+    padding-left: 50px;
+}
+
+.form-button button{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 50px;
+    color: white;
+    background-color: #596D48;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+    margin-bottom: 40px;
+}
+
+.form-button p{
+    font-size: 17px;
+}
+
+.form-button span{
+    color:#596D48;
+    font-weight: 800;
+}
+

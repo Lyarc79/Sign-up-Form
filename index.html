@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/967516047d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -30,11 +31,11 @@
                     <h2>Let's do this!</h2>
                     <div class="form-container">
                         <label for="f-name">FIRST NAME</label>
-                        <input type="text" name="f-name" id="f-name" required>
+                        <input type="text" name="f-name" id="f-name" required pattern="^[a-zA-Z]+$">
                     </div>
                     <div class="form-container">
                         <label for="l-name">LAST NAME</label>
-                        <input type="text" name="l-name" id="l-name" required>
+                        <input type="text" name="l-name" id="l-name" required pattern="^[a-zA-Z]+$">
                     </div>
                     <div class="form-container">
                         <label for="email">EMAIL</label>
@@ -42,15 +43,16 @@
                     </div>
                     <div class="form-container">
                         <label for="phone">PHONE</label>
-                        <input type="tel" name="phone" id="phone" required>
+                        <input type="tel" name="phone" id="phone" required pattern="^\d{9,15}$">
                     </div>
                     <div class="form-container">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password" required>
+                        <input type="password" name="password" id="password" required onkeyup="checkPass()">
                     </div>
                     <div class="form-container">
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" name="confirm-password" id="confirm-password" required>
+                        <input type="password" name="confirm-password" id="confirm-password" required onkeyup="checkPass()">
+                        <span id="passErrorMsg"></span>
                     </div>
                 </div>
                 <div class="form-button">
@@ -58,8 +60,14 @@
                     <p>Already have an account? <span>Log in</span></p>
                 </div>
             </form>
+            <div class="footer">
+                 <p> Made by Lyarc79
+                <a href="https://github.com/Lyarc79" target="_blank">
+                    <i id="github-logo" class="fa-brands fa-github"></i></a>on a <a href="https://www.theodinproject.com"> TOP</a> lesson
+            </p></div>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>

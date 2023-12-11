@@ -58,7 +58,8 @@
     padding: 15px 0px;
 }
 
-.img-author a{
+.img-author a,
+.footer a{
     color: inherit;
 }
 
@@ -116,13 +117,14 @@
     padding-left: 10px;
 }
 
-.form-container input:invalid{
-    border-color: red;
-}
-
 .form-container input:focus{
     border: 1px solid blue;
     box-shadow: 1px 1px 3px gray;
+}
+
+.form-container input:focus:invalid{
+    border-color: red;
+    box-shadow: none;
 }
 
 .form-button{
@@ -152,3 +154,35 @@
     cursor: pointer;
 }
 
+.passError{
+    color: red;
+    font-size: 12px;
+    font-weight: 100;
+    padding: 3px 10px;
+    margin-top: 5px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0px 20px 20px 0px;
+    color: rgb(43, 43, 43);
+
+}
+
+#github-logo{
+    color: black;
+    font-size: 22px;
+    margin-right: 10px;
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+#github-logo:hover{
+    transform: scale(1.1) rotate(360deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer a{
+    font-weight: bold;
+}

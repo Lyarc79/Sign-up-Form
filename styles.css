@@ -21,13 +21,15 @@
 }
 
 .hero {
+    display: flex;
+    flex-direction: column;
     position: relative;
     background-image: url(./imgs/hero_back01.jpg);
     background-position: center;
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: rgb(46, 46, 46);
-    width: 55vw;
+    width: 40vw;
 }
 
 .odin-container{
@@ -37,7 +39,7 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.363);
     position: absolute;
-    top: 25%;
+    top: 21%;
     width: 100%;
     padding: 10px 0;
 }
@@ -48,18 +50,30 @@
     font-size: 90px;
 }
 
+.img-author{
+    font-size: 15px;
+    color: white;
+    margin-top: auto;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.img-author a{
+    color: inherit;
+}
+
 .right-panel {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 45vw;
+    width: 60vw;
     background-color: #f0f0f0;
 }
 
 .form-header {
     padding-left: 50px;
     margin-bottom: 60px;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 500;
     width: 80%;
 }
@@ -67,7 +81,8 @@
 .form-panel {
     display: flex;
     flex-flow: row wrap;
-    gap: 20px;
+    gap: 25px;
+    column-gap: 100px;
     background-color: white;
     box-shadow: 0px 3px 8px rgb(187, 187, 187);
     padding: 30px 50px;
@@ -82,7 +97,7 @@
 .form-container {
     display: flex;
     flex-flow: column wrap;
-    width: 40%;
+    width: 30%;
 }
 
 .form-container label{
@@ -90,13 +105,24 @@
     font-weight: 500;
     color: #464646;
     margin-bottom: 2px;
+    letter-spacing: 2px;
 }
 
 .form-container input{
+    outline: none;
     border: 1px solid #E5E7EB;
-    height: 25px;
+    height: 30px;
     border-radius: 3px;
     padding-left: 10px;
+}
+
+.form-container input:invalid{
+    border-color: red;
+}
+
+.form-container input:focus{
+    border: 1px solid blue;
+    box-shadow: 1px 1px 3px gray;
 }
 
 .form-button{
@@ -112,7 +138,8 @@
     border-style: none;
     border-radius: 5px;
     box-shadow: 2px 2px 5px gray;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .form-button p{
@@ -122,5 +149,6 @@
 .form-button span{
     color:#596D48;
     font-weight: 800;
+    cursor: pointer;
 }
 
